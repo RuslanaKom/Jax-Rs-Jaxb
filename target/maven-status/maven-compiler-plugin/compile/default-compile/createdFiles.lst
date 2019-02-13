@@ -1,0 +1,4 @@
+viko_web_service\restservice\entities\Course.class
+viko_web_service\restservice\entities\Student.class
+viko_web_service\restservice\controllers\StudentController.class
+viko_web_service\restservice\utils\XmlConverter.class
