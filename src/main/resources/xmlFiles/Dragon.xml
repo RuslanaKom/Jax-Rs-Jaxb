@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dragon>
+    <amountOfGold>5600.0</amountOfGold>
+    <canFly>true</canFly>
+    <knightsEaten>
+        <knight>
+            <firstName>Arthur</firstName>
+            <nobleName>The Mouse Slayer</nobleName>
+            <numberOfDragonsDefeated>0</numberOfDragonsDefeated>
+            <title>Sir</title>
+        </knight>
+        <knight>
+            <firstName>Percival</firstName>
+            <nobleName>Green</nobleName>
+            <numberOfDragonsDefeated>0</numberOfDragonsDefeated>
+            <title>Sir</title>
+        </knight>
+    </knightsEaten>
+    <name>Alexstrasza</name>
+    <princessCurrentlyStolen>
+        <beautiful>true</beautiful>
+        <kingdom>East Kingdom</kingdom>
+        <name>Emeralda</name>
+        <stolen>true</stolen>
+    </princessCurrentlyStolen>
+</dragon>
