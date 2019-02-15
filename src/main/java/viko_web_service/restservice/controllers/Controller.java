@@ -1,5 +1,6 @@
 package viko_web_service.restservice.controllers;
 
+import javax.servlet.annotation.WebServlet;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -11,6 +12,7 @@ import viko_web_service.restservice.services.DragonService;
 /**
  * Rest controller 
  */
+@WebServlet
 @Path("/dragon")
 public class Controller {
     
