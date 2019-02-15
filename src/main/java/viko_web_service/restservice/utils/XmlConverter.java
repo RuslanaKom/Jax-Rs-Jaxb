@@ -14,12 +14,21 @@ import javax.xml.transform.Result;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
-import javax.xml.validation.Validator;
 
 import org.xml.sax.SAXException;
 
+/**
+ * Class provides methods for conversion from POJO to XML and vice versa, as
+ * well as creation of XSD schemas for given classes.
+ */
 public class XmlConverter {
 
+    /**
+     * Generates XSD schema of provided class
+     * 
+     * @param sourceClass
+     *            class for which schema is generated
+     */
     public void generateXsdSchema(Class sourceClass) throws IOException, JAXBException {
         JAXBContext jc = JAXBContext.newInstance(sourceClass);
         jc.generateSchema(new SchemaOutputResolver() {
@@ -31,8 +40,12 @@ public class XmlConverter {
         });
     }
 
+    /**
+     * Converts POJO to XML and writes it to file
+     * @param object object to be converted to XLM 
+     */
     public void convertToXmlFile(Object object) {
-        File file = new File("src\\main\\resources\\xmlFiles\\"+object.getClass().getSimpleName()+".xml");
+        File file = new File("src\\main\\resources\\xmlFiles\\" + object.getClass().getSimpleName() + ".xml");
         try {
 
             JAXBContext jaxbContext = JAXBContext.newInstance(object.getClass());
@@ -49,8 +62,12 @@ public class XmlConverter {
             e.printStackTrace();
         }
     }
-    
-    
+
+    /**
+     * Converts POJO to XML and returns it as String
+     * @param object object to be converted to XLM
+     * @return string xml representation oj object 
+     */
     public String convertToXmlString(Object object) {
         StringWriter sw = new StringWriter();
 
@@ -66,12 +83,18 @@ public class XmlConverter {
         catch (JAXBException e) {
             e.printStackTrace();
         }
-        
+
         return sw.toString();
     }
-
+    
+    /**
+     * Converts data from XML file to POJO
+     * @param file file to take data from
+     * @param targetClass class of object to be created
+     * @return object created from XML
+     */
     public Object convertToPOJO(File file, Class targetClass) {
-        File schemaFile = new File("src\\main\\resources\\xsdSchemas\\" + targetClass.getSimpleName()+ ".xsd");
+        File schemaFile = new File("src\\main\\resources\\xsdSchemas\\" + targetClass.getSimpleName() + ".xsd");
         Object object = null;
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(targetClass);

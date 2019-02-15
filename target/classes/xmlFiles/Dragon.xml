@@ -2,7 +2,8 @@
 <dragon>
     <amountOfGold>5600.0</amountOfGold>
     <canFly>true</canFly>
-    <knights>
+    <dateOfBirth>1101-01-02T00:00:00+02:00</dateOfBirth>
+    <knightsEaten>
         <knight>
             <firstName>Arthur</firstName>
             <nobleName>The Mouse Slayer</nobleName>
@@ -15,7 +16,7 @@
             <numberOfDragonsDefeated>0</numberOfDragonsDefeated>
             <title>Sir</title>
         </knight>
-    </knights>
+    </knightsEaten>
     <name>Alexstrasza</name>
     <princessCurrentlyStolen>
         <beautiful>true</beautiful>

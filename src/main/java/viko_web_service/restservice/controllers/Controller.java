@@ -6,17 +6,20 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import viko_web_service.restservice.services.Service;
+import viko_web_service.restservice.services.DragonService;
 
-@Path("/student")
+/**
+ * Rest controller 
+ */
+@Path("/dragon")
 public class Controller {
     
-    private Service studentService = new Service();
+    private DragonService service = new DragonService();
     
     @GET
     @Produces(MediaType.APPLICATION_XML)
     public Response getStudent() {
-        return Response.ok().type(MediaType.APPLICATION_XML).entity(studentService.giveDragonAsXml()).build();
+        return Response.ok().type(MediaType.APPLICATION_XML).entity(service.giveDragonAsXml()).build();
     }
 
 }

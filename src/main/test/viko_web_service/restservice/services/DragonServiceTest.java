@@ -8,12 +8,15 @@ import org.junit.Test;
 
 import viko_web_service.restservice.entities.Dragon;
 import viko_web_service.restservice.entities.Knight;
-import viko_web_service.restservice.services.Service;
+import viko_web_service.restservice.services.DragonService;
 import viko_web_service.restservice.utils.XmlConverter;
 
-public class ServiceTest {
+/**
+ * Test class for {@link DragonService}
+*/
+public class DragonServiceTest {
 
-    private Service service = new Service();
+    private DragonService service = new DragonService();
 
     @Test
     public void testWriteDragonToFile() {

@@ -2,6 +2,9 @@ package viko_web_service.restservice.entities;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * Entity class representing Princess
+ */
 @XmlRootElement
 public class Princess {
     
