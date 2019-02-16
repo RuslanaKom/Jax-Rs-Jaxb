@@ -1,4 +1,8 @@
-viko_web_service\restservice\entities\Course.class
-viko_web_service\restservice\entities\Student.class
-viko_web_service\restservice\controllers\StudentController.class
+viko_web_service\restservice\controllers\Controller.class
+viko_web_service\restservice\entities\Dragon.class
 viko_web_service\restservice\utils\XmlConverter.class
+viko_web_service\restservice\services\DragonService.class
+viko_web_service\restservice\dao\InMemoryDao.class
+viko_web_service\restservice\entities\Princess.class
+viko_web_service\restservice\entities\Knight.class
+viko_web_service\restservice\utils\XmlConverter$1.class
