@@ -1,12 +1,15 @@
-package viko_web_service.restservice.services;
+package lt.viko.rkomaristova.restservice.services;
 
 import java.io.File;
-import viko_web_service.restservice.dao.InMemoryDao;
-import viko_web_service.restservice.entities.Dragon;
-import viko_web_service.restservice.utils.XmlConverter;
+
+import javax.xml.bind.JAXBException;
+
+import lt.viko.rkomaristova.restservice.dao.InMemoryDao;
+import lt.viko.rkomaristova.restservice.entities.Dragon;
+import lt.viko.rkomaristova.restservice.utils.XmlConverter;
 
 /**
- * Class for performing transformations on {@link Dragon} entity
+ * Class for performing transformations on {@link Dragon} entity.
  */
 public class DragonService {
 
@@ -14,7 +17,7 @@ public class DragonService {
     private InMemoryDao dao = new InMemoryDao();
 
     /**
-     * Extracts first dragon from dao and returns it as XML string
+     * Extracts first dragon from dao and returns it as XML string.
      * @return XML string representing dragon
      */
     public String giveDragonAsXml() {
@@ -23,7 +26,7 @@ public class DragonService {
     }
     
     /**
-     * Extracts first dragon from dao and writes it as XML to file
+     * Extracts first dragon from dao and writes it as XML to file.
      */
     public void writeDragonToFile() {
         Dragon dragon = dao.getDragons().get(0);
@@ -31,11 +34,12 @@ public class DragonService {
     }
     
     /**
-     * Creates Dragon class object from xml file
+     * Creates Dragon class object from xml file.
      * @return created dragon object
+     * @throws JAXBException 
      */
-    public Dragon getDragonFromXmlFile() {
-        File file = new File("src\\main\\resources\\xmlFiles\\Dragon.xml");
+    public Dragon getDragonFromXmlFile(String filename) throws JAXBException {
+        File file = new File(filename);
         return (Dragon) xmlConverter.convertToPOJO(file, Dragon.class);
     }
 

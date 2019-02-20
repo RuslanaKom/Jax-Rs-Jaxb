@@ -1,4 +1,4 @@
-package viko_web_service.restservice.dao;
+package lt.viko.rkomaristova.restservice.dao;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,9 +8,9 @@ import java.util.List;
 
 import org.apache.http.client.utils.DateUtils;
 
-import viko_web_service.restservice.entities.Dragon;
-import viko_web_service.restservice.entities.Knight;
-import viko_web_service.restservice.entities.Princess;
+import lt.viko.rkomaristova.restservice.entities.Dragon;
+import lt.viko.rkomaristova.restservice.entities.Knight;
+import lt.viko.rkomaristova.restservice.entities.Princess;
 
 /**
  * Class simulating DataBase access and creating entities for application use.

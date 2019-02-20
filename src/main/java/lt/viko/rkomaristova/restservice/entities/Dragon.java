@@ -1,4 +1,4 @@
-package viko_web_service.restservice.entities;
+package lt.viko.rkomaristova.restservice.entities;
 
 import java.util.Date;
 import java.util.List;

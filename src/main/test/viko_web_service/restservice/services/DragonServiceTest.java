@@ -3,13 +3,16 @@ package viko_web_service.restservice.services;
 import java.io.IOException;
 
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.UnmarshalException;
 
+import org.hamcrest.core.IsNot;
 import org.junit.Test;
+import static org.hamcrest.MatcherAssert.assertThat; 
+import static org.hamcrest.Matchers.*;
 
-import viko_web_service.restservice.entities.Dragon;
-import viko_web_service.restservice.entities.Knight;
-import viko_web_service.restservice.services.DragonService;
-import viko_web_service.restservice.utils.XmlConverter;
+import lt.viko.rkomaristova.restservice.entities.Dragon;
+import lt.viko.rkomaristova.restservice.services.DragonService;
+import lt.viko.rkomaristova.restservice.utils.XmlConverter;
 
 /**
  * Test class for {@link DragonService}
@@ -29,11 +32,16 @@ public class DragonServiceTest {
     }
     
     @Test
-    public void testGetDragonFromFile() {
-        Dragon dragon = service.getDragonFromXmlFile();
-
-        System.out.println(dragon.getName());
-
+    public void testGetDragonFromFile() throws JAXBException {
+        String fileName = "src\\main\\resources\\xmlFiles\\Dragon.xml";
+        Dragon dragon = service.getDragonFromXmlFile(fileName);
+        assertThat(dragon.getName(), is(not(nullValue())));
+    }
+    
+    @Test(expected = UnmarshalException.class)
+    public void testGetDragonFromBadFile() throws JAXBException {
+        String fileName = "src\\main\\resources\\xmlFiles\\BadDragon.xml";
+        service.getDragonFromXmlFile(fileName);
     }
 
     @Test

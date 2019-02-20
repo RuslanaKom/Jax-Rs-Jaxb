@@ -1,4 +1,4 @@
-package viko_web_service.restservice.controllers;
+package lt.viko.rkomaristova.restservice.controllers;
 
 import javax.servlet.annotation.WebServlet;
 import javax.ws.rs.GET;
@@ -7,7 +7,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import viko_web_service.restservice.services.DragonService;
+import lt.viko.rkomaristova.restservice.services.DragonService;
 
 /**
  * Rest controller 

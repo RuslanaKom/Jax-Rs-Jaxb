@@ -1,4 +1,4 @@
-package viko_web_service.restservice.utils;
+package lt.viko.rkomaristova.restservice.utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,6 +9,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.SchemaOutputResolver;
+import javax.xml.bind.UnmarshalException;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.Result;
 import javax.xml.transform.stream.StreamResult;
@@ -25,7 +26,6 @@ public class XmlConverter {
 
     /**
      * Generates XSD schema of provided class
-     * 
      * @param sourceClass
      *            class for which schema is generated
      */
@@ -92,8 +92,9 @@ public class XmlConverter {
      * @param file file to take data from
      * @param targetClass class of object to be created
      * @return object created from XML
+     * @throws JAXBException 
      */
-    public Object convertToPOJO(File file, Class targetClass) {
+    public Object convertToPOJO(File file, Class targetClass) throws JAXBException {
         File schemaFile = new File("src\\main\\resources\\xsdSchemas\\" + targetClass.getSimpleName() + ".xsd");
         Object object = null;
         try {
@@ -105,9 +106,6 @@ public class XmlConverter {
             jaxbUnmarshaller.setSchema(schema);
 
             object = jaxbUnmarshaller.unmarshal(file);
-        }
-        catch (JAXBException e) {
-            e.printStackTrace();
         }
 
         catch (SAXException e) {
