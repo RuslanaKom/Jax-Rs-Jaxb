@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="dragon" type="dragon"/>
+
+  <xs:element name="knight" type="knight"/>
+
+  <xs:element name="princess" type="princess"/>
+
+  <xs:complexType name="dragon">
+    <xs:sequence>
+      <xs:element name="amountOfGold" type="xs:double"/>
+      <xs:element name="canFly" type="xs:boolean"/>
+      <xs:element name="dateOfBirth" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="knightsEaten" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="knight" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="name" type="xs:string" minOccurs="1"/>
+      <xs:element name="princessCurrentlyStolen" type="princess" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="knight">
+    <xs:sequence>
+      <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+      <xs:element name="nobleName" type="xs:string" minOccurs="0"/>
+      <xs:element name="numberOfDragonsDefeated" type="xs:int"/>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="princess">
+    <xs:sequence>
+      <xs:element name="beautiful" type="xs:boolean"/>
+      <xs:element name="kingdom" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="stolen" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

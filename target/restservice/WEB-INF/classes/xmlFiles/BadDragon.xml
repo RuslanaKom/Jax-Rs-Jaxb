@@ -2,7 +2,7 @@
 <dragon>
     <amountOfGold>5600.0</amountOfGold>
     <canFly>true</canFly>
-    <dateOfBirth>1032-03-05T10:20:15</dateOfBirth>
+    <dateOfBirth>1101-01-02T00:00:00+02:00</dateOfBirth>
     <knightsEaten>
         <knight>
             <firstName>Arthur</firstName>
@@ -17,7 +17,6 @@
             <title>Sir</title>
         </knight>
     </knightsEaten>
-    <name>Alexstrasza</name>
     <princessCurrentlyStolen>
         <beautiful>true</beautiful>
         <kingdom>East Kingdom</kingdom>

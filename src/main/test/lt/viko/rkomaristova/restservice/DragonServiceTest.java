@@ -1,4 +1,4 @@
-package viko_web_service.restservice.services;
+package lt.viko.rkomaristova.restservice;
 
 import java.io.IOException;
 

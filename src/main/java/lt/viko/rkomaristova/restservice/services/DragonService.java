@@ -5,6 +5,7 @@ import java.io.File;
 import javax.xml.bind.JAXBException;
 
 import lt.viko.rkomaristova.restservice.dao.InMemoryDao;
+import lt.viko.rkomaristova.restservice.dao.InMemoryDaoImpl;
 import lt.viko.rkomaristova.restservice.entities.Dragon;
 import lt.viko.rkomaristova.restservice.utils.XmlConverter;
 
@@ -14,7 +15,7 @@ import lt.viko.rkomaristova.restservice.utils.XmlConverter;
 public class DragonService {
 
     private XmlConverter xmlConverter = new XmlConverter();
-    private InMemoryDao dao = new InMemoryDao();
+    private InMemoryDao dao = new InMemoryDaoImpl();
 
     /**
      * Extracts first dragon from dao and returns it as XML string.
