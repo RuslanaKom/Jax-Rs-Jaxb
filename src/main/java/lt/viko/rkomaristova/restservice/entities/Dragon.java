@@ -1,7 +1,6 @@
 package lt.viko.rkomaristova.restservice.entities;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -22,7 +21,6 @@ public class Dragon {
     private double amountOfGold;
     private boolean canFly;
     private Princess princessCurrentlyStolen;
-
     private List<Knight> knightsEaten;
 
 	public Dragon() {

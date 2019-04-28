@@ -1,10 +1,15 @@
 lt\viko\rkomaristova\restservice\dao\InMemoryDaoImpl.class
 lt\viko\rkomaristova\restservice\dao\InMemoryDao.class
+lt\viko\rkomaristova\restservice\controllers\KnightController.class
 lt\viko\rkomaristova\restservice\utils\XmlConverter$1.class
 lt\viko\rkomaristova\restservice\entities\Dragon.class
 lt\viko\rkomaristova\restservice\utils\LocalDateAdapter.class
 lt\viko\rkomaristova\restservice\utils\XmlConverter.class
 lt\viko\rkomaristova\restservice\services\DragonService.class
+lt\viko\rkomaristova\restservice\controllers\PrincessController.class
+lt\viko\rkomaristova\restservice\dto\PrincessDto.class
 lt\viko\rkomaristova\restservice\entities\Knight.class
 lt\viko\rkomaristova\restservice\entities\Princess.class
 lt\viko\rkomaristova\restservice\controllers\DragonController.class
+lt\viko\rkomaristova\restservice\dto\DragonDto.class
+lt\viko\rkomaristova\restservice\dto\KnightDto.class

@@ -54,7 +54,4 @@ public class Princess {
     public void setBeautiful(boolean beautiful) {
         this.beautiful = beautiful;
     }
-    
-    
-
 }
